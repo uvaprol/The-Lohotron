@@ -1,0 +1,119 @@
+body {
+  background-color: black;
+  color: #fff;
+  overflow: hidden;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+body section {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+body section .arrows {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section .arrows .arrow {
+  color: #f1c40f;
+  position: relative;
+  font-weight: bold;
+  font-size: 150px;
+  top: -160px;
+  border: none;
+}
+body section .arrows .arrow:last-child {
+  top: -90px;
+}
+body section .roulette {
+  display: flex;
+  position: relative;
+  top: -347px;
+  transform: translateX(4450px);
+  animation: none;
+}
+@keyframes scroll_right {
+  0% {
+    transform: translateX(4450px);
+  }
+  90% {
+    transform: translateX(-4510px);
+  }
+  100% {
+    transform: translateX(-4550px);
+  }
+}
+@keyframes scroll_left {
+  0% {
+    transform: translateX(4450px);
+  }
+  90% {
+    transform: translateX(-4510px);
+  }
+  100% {
+    transform: translateX(-4450px);
+  }
+}
+body section .roulette .slot {
+  transform: translateX(0px);
+  width: 97px;
+  height: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #f1c40f;
+  border-right: 0px;
+}
+body section .roulette .slot p {
+  font-family: "Montserrat", sans-serif;
+  position: static;
+  font-weight: bold;
+  font-size: 50px;
+}
+body section .roulette .slot:last-child {
+  border-right: 3px solid #f1c40f;
+}
+body button {
+  position: absolute;
+  bottom: 100px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-color: #f1c40f;
+  color: #fff;
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+body button:hover, body button:focus {
+  color: #fff;
+  outline: 0;
+}
+body button:hover {
+  background-position: 0;
+}/*# sourceMappingURL=style.css.map */

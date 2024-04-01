@@ -1,0 +1,120 @@
+$yellow: #f1c40f;
+
+body {
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    // .arrow:last-child{
+
+    //     // top: 50px;
+    //     // font-weight: bold;
+    //     // font-size: 150px;
+    // }
+    section {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        .arrows{
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .arrow {
+                color: $yellow;
+                position: relative;
+                font-weight: bold;
+                font-size: 150px;
+                top: -160px; //-60
+                border: none;
+            }
+            .arrow:last-child{
+                top: -90px; //-60
+            }
+        }
+        .roulette{
+            display: flex;
+            position: relative;
+            top: -347px;
+            transform: translateX(4450px);
+            animation: none;
+            @keyframes scroll_right {
+                0% {transform: translateX(4450px);}
+                90% {transform: translateX(-4510px);}
+                100% {transform: translateX(-4550px);}
+            }
+            @keyframes scroll_left {
+                0% {transform: translateX(4450px);}
+                90% {transform: translateX(-4510px);}
+                100% {transform: translateX(-4450px);}
+            }
+            .slot{
+                transform: translateX(0px); //-100
+                width: 97px;
+                height: 97px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 3px solid $yellow;
+                border-right: 0px;
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    position: static;
+                    font-weight: bold;
+                    font-size: 50px;
+                }
+            }
+            .slot:last-child {
+                border-right: 3px solid $yellow;
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        bottom: 100px;
+
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid red;
+        border-radius: 0.6em;
+        color: red;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 20px;
+        padding: 1.2em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            outline: 0;
+        }
+
+        border-color: $yellow;
+        color: #fff;
+        background: {
+            image: linear-gradient(45deg, $yellow 50%, transparent 50%);
+            position: 100%;
+            size: 400%;
+        }
+        transition: background 300ms ease-in-out;
+        &:hover {
+            background-position: 0;
+        }
+    }
+}
